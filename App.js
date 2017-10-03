@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Alert, Button, Image, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-// import Content from './src/Content'
+import ContactContent from './src/components/ContactContent'
 
 export default class App extends Component {
 
@@ -35,25 +35,10 @@ export default class App extends Component {
           <Text style={ styles.big }>Hi!</Text>
           <Text>I am Ashari Muhammad Hisbulloh</Text>
 
-          <View style={styles.contentContact}>
-            <Image source={icon} style={styles.iconContact} />
-            <Text style={styles.textContact}>Lorem Ipsum Dolorsit Amet</Text>
-          </View>
-
-          <View style={styles.contentContact}>
-            <Image source={icon} style={styles.iconContact} />
-            <Text style={styles.textContact}>+62 812 3456 7890</Text>
-          </View>
-
-          <View style={styles.contentContact}>
-            <Image source={icon} style={styles.iconContact} />
-            <Text style={styles.textContact}>loremipsum@mail.com</Text>
-          </View>
-
-          <View style={styles.contentContact}>
-            <Image source={icon} style={styles.iconContact} />
-            <Text style={styles.textContact}>www.loremipsum.com</Text>
-          </View>
+          <ContactContent img='man' text='Lorem Ipsum Dolorsit Amet' />
+          <ContactContent img='phone' text='+62 812 3456 7890' />
+          <ContactContent img='mail' text='loremipsum@mail.com' />
+          <ContactContent img='internet' text='www.loremipsum.com' />
 
           <View style={styles.contentContact}>
             <TextInput 
